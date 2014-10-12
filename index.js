@@ -5,5 +5,6 @@ var server = new Hapi.Server('localhost', 8000);
 var routes = require('./server/routes.js')(server);
 
 // Start the server
-console.log("Server started: ");
-server.start();
+server.start(function() {
+    console.log('Server started on ' + server.info.uri + ':' + server.info.port);
+});
