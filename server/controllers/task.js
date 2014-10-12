@@ -1,19 +1,13 @@
 var Task = require('../models/task.js');
-
-var tep = new Task('Hapi', 'None', 2, 'Never');
+var db = require('../models/db.js');
 
 module.exports = {
     create: function() {
-        return Task.create();
-
     },
     remove: function() {
-        return Task.remove();
     },
     get: function() {
-        return tep.get();
     },
     update: function() {
-        return Task.update();
     }
 };

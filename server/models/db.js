@@ -1,6 +1,18 @@
 var pg = require('pg');
 var conString = "postgres://username:password@localhost/database";
 
+module.exports = {
+  insert: function() {
+
+  },
+
+  select: function() {
+
+  }
+
+};
+
+
 pg.connect(conString, function(err, client, done) {
   if(err) {
     return console.error('error fetching client from pool', err);
